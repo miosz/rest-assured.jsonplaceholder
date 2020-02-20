@@ -54,7 +54,7 @@ public class postsTest {
                 body("{\n" +
                         "    \"userId\": 123,\n" +
                         "    \"title\": \"test\",\n" +
-                        "    \"body\": \"post testing\"\n" +
+                        "    \"body\": \"post test\"\n" +
                         "}")
         .when()
                 .post("/posts")
@@ -73,7 +73,7 @@ public class postsTest {
                         "    \"id\": 100,\n" +
                         "    \"userId\": 123,\n" +
                         "    \"title\": \"test\",\n" +
-                        "    \"body\": \"post testing\"\n" +
+                        "    \"body\": \"put test\"\n" +
                         "}")
         .when()
                 .put("/posts/100")
