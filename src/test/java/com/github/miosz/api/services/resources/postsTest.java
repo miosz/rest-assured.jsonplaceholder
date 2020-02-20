@@ -10,12 +10,14 @@ import static org.hamcrest.Matchers.*;
 
 public class postsTest {
 
+    String url = "https://jsonplaceholder.typicode.com";
+
     @Test
     public void
     checkPostsContentTest() {
 
         given().
-                baseUri("https://jsonplaceholder.typicode.com").
+                baseUri(url).
         when().
                 get("/posts").
         then().
@@ -33,7 +35,7 @@ public class postsTest {
     checkPostIdContentTest() {
 
         given().
-                baseUri("https://jsonplaceholder.typicode.com").
+                baseUri(url).
         when().
                 get("/posts/1").
         then().
@@ -49,7 +51,7 @@ public class postsTest {
     createNewPostTest() {
 
         given().
-                baseUri("https://jsonplaceholder.typicode.com").
+                baseUri(url).
                 contentType(ContentType.JSON).
                 body("{\n" +
                         "    \"userId\": 123,\n" +
@@ -67,7 +69,7 @@ public class postsTest {
     changePostBodyTest() {
 
         given().
-                baseUri("https://jsonplaceholder.typicode.com").
+                baseUri(url).
                 contentType(ContentType.JSON).
                 body("{\n" +
                         "    \"id\": 100,\n" +
